@@ -7,15 +7,14 @@
     <body style="margin : 0px; overflow: hidden;">
         <a-scene embedded arjs>
         <a-marker preset="hiro">
-            <a-entity
-            position="0 0.5 0"
-            rotation="0 0 0"
-            scale="0.05 0.05 0.05"
-            src="cartevisite-3.png"
-            ></a-entity>
-        </a-marker>
-<a-marker type="pattern" url="pattern-card.patt">
-  <a-box color="red" position="0 0.5 0"></a-box>
+
+  <a-image
+    src="cartevisite-3.png"
+    position="0 0.5 0"
+    width="1"
+    height="0.6">
+  </a-image>
+
 </a-marker>
         <a-entity camera></a-entity>
         </a-scene>
