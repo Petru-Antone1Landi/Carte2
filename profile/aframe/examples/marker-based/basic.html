@@ -30,7 +30,7 @@
                 height="0.5">
             </a-image>
             <a-entity
-                class="clickable"
+                id="btn-site"
                 geometry="primitive: plane; width: 1; height: 1"
                 material="color: darkblue"
                 position="-1.4 0.5 0.5" 
@@ -49,11 +49,18 @@
             </a-entity>
         </a-marker>
             <a-camera
+                camera
                 cursor="rayOrigin: mouse"
-                raycaster="objects: .clickable"
-                look-controls="enabled: false">
+                raycaster="objects: .clickable">
             </a-camera>
             
         </a-scene>
+        <script>
+          const btn = document.querySelector('#btn-site');
+
+          btn.addEventListener('click', () => {
+            window.location.href = 'https://p-a.landi.com';
+              });
+        </script>
     </body>
 </html>
