@@ -39,7 +39,7 @@
                 link="href: https://p-a.landi.com; target: _blank">
             </a-entity>
             <a-entity
-              class="clickable"  
+              id="btn-mail" 
               geometry="primitive: plane; width: 1; height: 1"
               material="color: darkblue"
               position="-1.4 0.5 0"
@@ -56,10 +56,15 @@
             
         </a-scene>
         <script>
-          const btn = document.querySelector('#btn-site');
-
-          btn.addEventListener('click', () => {
+          const btnsite = document.querySelector('#btn-site');
+            const btnmail = document.querySelector('#btn-mail');
+            
+          btnsite.addEventListener('click', () => {
             window.location.href = 'https://p-a.landi.com';
+              });
+
+          btnmail.addEventListener('click', () => {
+            window.location.href = 'mailto:petruajaccio@gmail.com';
               });
         </script>
     </body>
