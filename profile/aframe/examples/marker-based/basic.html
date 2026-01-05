@@ -7,7 +7,11 @@
     <body style="margin : 0px; overflow: hidden;">
         <a-scene embedded arjs>
         <a-marker preset="hiro">
-
+            <a-camera
+                cursor="rayOrigin: mouse"
+                raycaster="objects: .clickable"
+                look-controls="enabled: false">
+            </a-camera>
             <a-image
                 src="cartev1.png"
                 position="0 0.5 0"
@@ -30,7 +34,8 @@
                 height="0.5">
             </a-image>
             <a-entity
-                geometry="primitive: plane; width: 0.4; height: 0.2"
+                class="clickable"
+                geometry="primitive: plane; width: 2; height: 2"
                 material="color: darkblue"
                 position="-1.4 0.5 0.5" 
                 rotation="-90 0 0"
@@ -38,7 +43,8 @@
                 link="href: https://p-a.landi.com; target: _blank">
             </a-entity>
             <a-entity
-              geometry="primitive: plane; width: 0.4; height: 0.2"
+              class="clickable"  
+              geometry="primitive: plane; width: 2; height: 2"
               material="color: darkblue"
               position="-1.4 0.5 0"
                 rotation="-90 0 0"
@@ -46,7 +52,6 @@
               link="href: petruajaccio@gmail.com">
             </a-entity>
         </a-marker>
-        <a-entity camera></a-entity>
         </a-scene>
     </body>
 </html>
